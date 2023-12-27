@@ -6,6 +6,16 @@
     --dark: #1D2A4D;
 }
 
+.equal-height {
+    display: flex;
+    flex-direction: column;
+}
+
+.equal-height .bg-light {
+    flex: 1;
+}
+
+
 .btn {
     font-weight: 700;
     transition: .5s;
