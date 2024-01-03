@@ -100,9 +100,20 @@
 }
 
 @media (max-width: 991.98px) {
-    .navbar-light .navbar-nav .nav-link  {
-        margin-left: 0;
+    .navbar-light .navbar-nav .nav-link {
         padding: 10px 0;
+        margin: 0 auto;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand h3 {
+        font-size: 1rem; /* Sesuaikan ukuran font sesuai keinginan */
+    }
+
+    .navbar-brand img {
+        max-height: 50px; /* Sesuaikan ukuran maksimal gambar sesuai keinginan */
     }
 }
 
