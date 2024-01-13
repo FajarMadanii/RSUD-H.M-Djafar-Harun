@@ -102,4 +102,29 @@
     
 })(jQuery);
 
+document.addEventListener("DOMContentLoaded", function () {
+    var contentItems = document.querySelectorAll('.equal-height');
+    var loadMoreBtn = document.querySelector('.btn-primary');
+
+    // Jumlah berita yang ditampilkan sebelum menekan "Load More"
+    var initialItemsToShow = 6;
+    var totalItems = contentItems.length;
+
+    // Sembunyikan berita yang tidak termasuk dalam jumlah awal yang ditampilkan
+    for (var i = initialItemsToShow; i < totalItems; i++) {
+      contentItems[i].style.display = 'none';
+    }
+
+    // Tambahkan event listener untuk tombol "Load More"
+    loadMoreBtn.addEventListener('click', function () {
+      // Tampilkan semua berita
+      for (var i = initialItemsToShow; i < totalItems; i++) {
+        contentItems[i].style.display = 'block';
+      }
+
+      // Sembunyikan tombol "Load More" setelah menampilkan semua berita
+      loadMoreBtn.style.display = 'none';
+    });
+  });
+
 
